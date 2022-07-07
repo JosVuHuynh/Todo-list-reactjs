@@ -9,10 +9,11 @@ class MyComponent extends React.Component {
         arrJob: [
             {id:'1', title:'Developer', salary:'500'},
             {id:'2', title:'Tester', salary:'400'},
-            {id:'3', title:'PM', salary:'1000'}
+            {id:'3', title:'PM', salary:'1000'},
         ]
     }
 
+    
     handleOnChangeName(event){
         this.setState({
             name: event.target.value
@@ -40,7 +41,6 @@ class MyComponent extends React.Component {
         return (
             <div>
                 <AddComponent addNewJob= {this.addNewJob}/>
-               
                 <ChildComponent arrJob={this.state.arrJob} deleteJob = {this.deleteJob}/>
             </div>
         )
